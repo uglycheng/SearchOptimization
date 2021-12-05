@@ -3,7 +3,6 @@ This is a course project of UCSD CSE257 with Prof.Sicun Gao. It includes impleme
 <br>**Numerical Optimizers**
 * Gradient based methods: Gradient Descent, Newtown Descent, Conjugate Descent
 * Stochastic methods: Simulated Annealing, Cross Entropy, Search Gradient
-
 <br>**A-Star Search**
 <br>**Minimax Search**
 <br>**Markov Decision Process**
