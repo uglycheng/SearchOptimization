@@ -79,14 +79,33 @@ Import **Minimax** from GameSearch.py. This class implements Minimax search on t
 
 - **Game**: Initialize the class with the list of the stones. It has two methods and 4 useful attributes:
   -**step**(player,head_tail): player should be either 'A' or 'B' indicating the player to take a stone. head_tail should be either 'h' or 't' indicating which stone to take
-  - **undo**() undo the last step.
-  - **A** player A's score.
-  - **B** player B's score.
-  - **head** current index of the head of the stone list.
-  - **tail** current index of the tail of the stone list.
+  - **undo**(): undo the last step.
+  - **A**: player A's score.
+  - **B**: player B's score.
+  - **head**: current index of the head of the stone list.
+  - **tail**: current index of the tail of the stone list.
 - **Node**: Tree node used for minimax search. It has three attributes:
   - **children**: a list of instances of Node class representing its children nodes.
   - **player**: current player to take the next stone
   - **score**: current player the score
 - **Minimax**: Initialize the class with maximum tree layers **layer**(int), which **player**(either 'A' or 'B', 'A' takes the first turn) you are and the game simulator **game**. After initialization, the instance will have a attribute **node**(Instance of class Node) denoting your status at the beginning of the game. The method **minimax** take the starting node as the root and perform the minimax algorithm. To search from the beginning of the game, use the attribute node as the method minimax's input.
 
+## Markov Decision Process
+Import **MDP** from MDP.py. 4 parameters are needed to initialize a instance:
+- **s_a_dic**: states-actions dictionary. The keys are states, the value for some key is a set containing possible actions under this states.
+- **s_r_dic**: states-rewards dictionary. The keys are states, the value for some key is the reward(float or int) of the states.
+- **sa_t_dic**: states-actions transition dictionary. The keys are tuples of (state,action), the value for some key is a dictionary whose keys are the possible next states and the values are their transition probabilities.
+- **cal_r**: a self-defined function to calculate reward, if passing None to this argument, the reward calculation will simply be key-value query from the s_r_dic.
+
+MDP has 2 useful methods:
+- **value_iteration**(threshold,max_iter,gamma,target=None): 
+  - **threshold**: float. When all the values' absolute differences between adjacent iterations are smaller than threshold, the iteration stops.
+  - **max_iter**: max number of iterations, int. The optimization process will stop after max number of iterations even if it doesn't converge.    
+  - **gamma**: discount parameter.
+  - **target**: a list of terminal states. Even if you pass None to this argument, the MDP will know whether a state is a terminal states basing on s_a_dic. This parameter is only needed when your cal_r function needs to know the target states, otherwise you can just pass None. 
+- **policy_iteration**(threshold,max_iter_improve,max_iter_evaluation,gamma,target=None): 
+  - **threshold**: float. When all the values' absolute differences between adjacent iterations are smaller than threshold, the iteration stops.
+  - **max_iter_improve**: max number of iteration for policy improvement, int
+  - **max_iter_evaluation**: max number of iteration for policy evaluation, int
+  - **gamma**: discount parameter, float
+  - **target**: a list of terminal states. Even if you pass None to this argument, the MDP will know whether a state is a terminal states basing on s_a_dic. This parameter is only needed when your cal_r function needs to know the target states, otherwise you can just pass None. 
