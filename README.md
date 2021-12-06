@@ -133,6 +133,7 @@ Import **DQN** from DQN.py. DQN.py also contains a class Net to implement the De
 - **gamma**: discount parameter, float
 - **epsilon**: epsilon value for epsilon-greedy algorithm, float
 - **actions**: a list of all the possible actions.
+
 <br>It has 3 methods:
 - **store**(state,action,reward,nstate,terminal) : store a (action,reward,next_state,terminal) tuple in the replay memory
 - **act**(state): choosing an action basing on epsilon-greedy algorithm under given state.
