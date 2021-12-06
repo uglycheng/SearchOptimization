@@ -23,11 +23,14 @@ Use GradientOptimizer defined in Numerical_Optimizer.py. To initialize a instanc
 
 
 All of them has three parameters:
-- x0: initial point, it should have the same format of your target function's input
-- lr: learning rate, float.
-- max_iter: max number of iterations, int. The optimization process will stop after max number of iterations even if it doesn't converge.
+- **x0**: initial point, it should have the same format of your target function's input
+- **lr**: learning rate, float.
+- **max_iter**: max number of iterations, int. The optimization process will stop after max number of iterations even if it doesn't converge.
 
 
 All of them will return 2 lists:
-- x_history: the target function's variable values after each descent step.
-- y_history: the target function's values after each descent step.
+- **x_history**: the target function's variable values after each descent step.
+- **y_history**: the target function's values after each descent step.
+
+Here is a plot of the three methods' optimization process for $f(x_1,x_2,x_3,x_4,x_5) = x_1^2+x_2^2+x_3^2+x_4^2+x_5^2$
+<!-- ![PNG](http://static.runoob.com/images/runoob-logo.png) -->
