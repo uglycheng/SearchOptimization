@@ -79,15 +79,23 @@ Import **Minimax** from GameSearch.py. This class implements Minimax search on t
 
 -**Game**: Initialize the class with the list of the stones. It has two methods and 4 useful attributes:
   -**step**(player,head_tail): player should be either 'A' or 'B' indicating the player to take a stone. head_tail should be either 'h' or 't' indicating which stone to take
+  
   -**undo**() undo the last step.
+  
   -**A** player A's score.
+  
   -**B** player B's score.
+  
   -**head** current index of the head of the stone list.
+  
   -**tail** current index of the tail of the stone list.
 
 -**Node**: Tree node used for minimax search. It has three attributes:
+  
   -**children**: a list of instances of Node class representing its children nodes.
+  
   -**player**: current player to take the next stone
+  
   -**score**: current player the score
 
 -**Minimax**: Initialize the class with maximum tree layers **layer**(int), which **player**(either 'A' or 'B', 'A' takes the first turn) you are and the game simulator **game**. After initialization, the instance will have a attribute **node**(Instance of class Node) denoting your status at the beginning of the game. The method **minimax** take the starting node as the root and perform the minimax algorithm. To search from the beginning of the game, use the attribute node as the method minimax's input.
