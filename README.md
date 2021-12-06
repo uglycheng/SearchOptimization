@@ -143,6 +143,6 @@ I Designed a simple Mechanical Arm to implement DQN on it. It is defined in Mech
 ![PNG](./figs/arm.png)
 Here are two examples of my learning process for target point (1.2, 1.3) and (1.5,1.5)(The arm is not long enough to reach this point). My codes for generation of these gif are in DQN.py.
 <br>target = (1.2, 1.3)
-![GIF](./figs/arm.png)
+![GIF](./figs/rl-1638703116.820791.gif)
 <br>target = (1.5, 1.5)
-![GIF](./figs/arm.png)
+![GIF](./figs/rl-1638703601.566966.gif)
