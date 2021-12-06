@@ -32,5 +32,6 @@ All of them will return 2 lists:
 - **x_history**: the target function's variable values after each descent step.
 - **y_history**: the target function's values after each descent step.
 
-Here is a plot of the three methods' optimization process for $f(x_1,x_2,x_3,x_4,x_5) = x_1^2+x_2^2+x_3^2+x_4^2+x_5^2$
-<!-- ![PNG](http://static.runoob.com/images/runoob-logo.png) -->
+Here is a plot of the three methods' optimization process for 
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= $f(x_1,x_2,x_3,x_4,x_5) = x_1^2+x_2^2+x_3^2+x_4^2+x_5^2$" style="border:none;">
+![PNG](./figs/gradient_based.png)
