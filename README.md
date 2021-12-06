@@ -41,7 +41,7 @@ Import **StochasticOptimizer** from Numerical_Optimizer.py. The initialization i
 - **simulated_annealing**(x0,T0,T_decay_method='fast',gamma=0.8,seed=29,max_iter=100)
   - **x0**: initial point, it should have the same format of your target function's input 
   - **T0**: initial temperature, float.
-  - **T_decay_method**: temperature decay method. It should be one of 'fast','exponential','log'
+  - **T_decay_method**: temperature decay method. It should be one of 'fast', 'exponential', 'log'
   - **gamma**: decay constant if your T_decay_method is 'exponential', float.
   - **seed**: sample random seed, int.
   - **max_iter**: max number of iterations, int. The optimization process will stop after max number of iterations even if it doesn't converge.
@@ -78,7 +78,7 @@ Import **A_star** from ClassicalSearch.py. This class implements A-star search o
 Import **Minimax** from GameSearch.py. This class implements Minimax search on the [Stone Game](https://leetcode-cn.com/problems/stone-game/). Import Game from GameSearch.py as the game simulator. Note that using dynamic programming, this game's winner can be predicted easily. Using this Minimax class is not the best way to solve the problem, this class aims to show how the algorithm works.
 
 - **Game**: Initialize the class with the list of the stones. It has two methods and 4 useful attributes:
-  -**step**(player,head_tail): player should be either 'A' or 'B' indicating the player to take a stone. head_tail should be either 'h' or 't' indicating which stone to take
+  - **step**(player,head_tail): player should be either 'A' or 'B' indicating the player to take a stone. head_tail should be either 'h' or 't' indicating which stone to take
   - **undo**(): undo the last step.
   - **A**: player A's score.
   - **B**: player B's score.
@@ -139,7 +139,7 @@ Import **DQN** from DQN.py. DQN.py also contains a class Net to implement the De
 - **replay**(batch_size): sample a minibatch from the replay memory and update the DNN
 
 I Designed a simple Mechanical Arm to implement DQN on it. It is defined in MechanicalArm.py. The arm has two sticks of length L=1. The end of one stick is fixed at position (0,0). You can set a target position for the arm. The state is described with two paremeters 
-<img src="http://latex.codecogs.com/gif.latex? \theta_1, \theta_2" style="border:none;"> as shown in the following figure. The black point is the fixed point and the red point is the target point. Each angle has 3 moves: plus 10 degrees, 0 degree or -10 degrees. For each action in our action space, both angles make a move, so our action space contains 3x3=9 actions. You can modify the code to make the arm's moves more accurate(For example, each move turns 1 degree).
+<img src="http://latex.codecogs.com/gif.latex? \theta_1, \theta_2" style="border:none;"> as shown in the following figure. The black point is the fixed point and the red point is the target point. Each angle has 3 moves: plus 10 degrees, 0 degree or -10 degrees. For each action in our action space, both angles make a move, so our action space contains 3x3=9 actions. The reward is 1/(0.001 + distance to target). You can modify the code to make the arm's moves more accurate(For example, each move turns 1 degree).
 ![PNG](./figs/arm.png)
 Here are two examples of my learning process for target point (1.2, 1.3) and (1.5,1.5)(The arm is not long enough to reach this point). My codes for generation of these gif are in DQN.py.
 <br>target = (1.2, 1.3)
